@@ -1,0 +1,301 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400&display=swap');
+
+@keyframes circle{
+    0%{
+        transform:rotate(360deg)
+                translate(-100px)
+                rotate(-360deg);
+                
+    }
+    100%{
+        transform:rotate(0deg)
+                translate(-100px)
+                rotate(0deg);
+    }
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body {
+    background-color: #D9D2CC;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 1rem;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.outer-container {
+    width: 76vw;
+    /* height: 70vh; */
+}
+
+.navbar {
+    display: flex;
+    gap: 1.5rem;
+    align-items: end;
+}
+
+.logo {
+    width: 15%;
+}
+
+.cv {
+    padding: 0.7rem;
+    border: 3px solid #40261D;
+    border-radius: 5px;
+}
+
+/* project hover should open an new div */
+.project-box {
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+}
+
+.projects {
+    padding: 0.7rem;
+    border: 3px solid #40261D;
+    border-radius: 5px;
+}
+
+.project-list {
+    display: none;
+    background-color: #FFF;
+}
+
+.project-box:hover .project-list,
+.projects:hover + .project-list {
+    border: 3px solid #40261D;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 0.7rem;
+    border-radius: 5px;
+    gap: 1rem;  
+    cursor: pointer;
+}
+
+.projects:hover {
+    cursor: pointer;
+}
+
+.project-list a {
+    text-align: center;
+}
+
+/* project end */
+
+.cv, .project-box {
+    margin-bottom: 1.3rem;
+}
+
+.inner-container {
+    background-color: #AB8F7B;
+    padding: 5rem 3rem;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    align-items: start;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+.owl-carousel {
+    width: 70% !important;
+}
+
+.owl-stage-outer {
+    border-radius: 8px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+    background-color: #000 !important;
+}
+
+.owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span {
+    background-color: #FFF !important; 
+}
+
+.about-me {
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.about-me-header {
+    font-weight: 400;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.about-me-content {
+    font-weight: 100;
+    font-size: 1.3rem;
+}
+
+.fa-instagram {
+    font-size:36px;
+    position: absolute;
+    right: 8rem;
+    bottom: 2rem;
+}
+
+.fa-linkedin {
+    font-size:36px;
+    position: absolute;
+    right: 4rem;
+    bottom: 2rem;
+    color: #000;
+}
+
+.fa-at {
+    font-size: 36px;
+    position: absolute;
+    left: 4rem;
+    bottom: 2rem;
+}
+
+/* ofis.html start */
+
+.site-logo {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 7%;
+}
+
+.ofis-outer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.ofis-lefttop,
+.ofis-rightbottom {
+    padding: 2rem;
+}
+
+.ofis-righttop {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    position: relative;
+}
+
+.ofis-leftbottom {
+    padding: 5rem;
+    line-height: 2rem;
+}
+
+.ofis-photo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ofis-photo img {
+    width: 90%;
+    border-radius: 1rem;
+}
+
+.fa-house-laptop {
+    position: absolute;
+    top: 47%;
+    left: 47%;
+    animation: circle 3s linear infinite;
+}
+
+/* ofis.html end */
+
+/* banyo.html and salon.html start */
+
+.banyo-outer {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem
+}
+
+.left-photo-one img {
+    width: 100%;
+    border-radius: 1rem;
+}
+
+.left-description {
+    padding: 4rem;
+    line-height: 2rem;
+}
+
+.site-theme {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right-photos {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.right-photo-one,
+.right-photo-two {
+    text-align: center;
+}
+
+.right-photo-one img,
+.right-photo-two img {
+    width: 80%;
+    border-radius: 1rem;
+}
+
+/* banyo.html and salon.html end */
+
+/* kafe.html start */
+
+.kafe-outer {
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.kafe-left-photo img {
+    width: 100%;
+    border-radius: 1rem;
+    margin-bottom: 15rem;
+}
+
+.kafe-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.kafe-site-theme {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.kafe-left-description {
+    padding: 4rem 4rem 0 4rem;
+    line-height: 2rem;
+}
